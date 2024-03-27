@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Работники{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Работники</h1>
+            {% if workers %}
+            {% for el in workers %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.surname }}</h3>
+                    <p>Должность: {{ el.post }}</p>
+                    <p>Образование: {{ el.education }}</p>
+                    <p>Год рождения: {{ el.birth_year }}</p>
+                    <p>Год начала работы: {{ el.year_to_work }}</p>
+                    <p>Зарплата: {{ el.salary }} руб</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Работники не найдены :(</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
