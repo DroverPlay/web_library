@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Библиотеки{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Библиотеки</h1>
+            {% if libraries %}
+            {% for el in libraries %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.name }}</h3>
+                    <p>Город: {{ el.city }}</p>
+                    <p>Адрес: {{ el.adres_library }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Библиотеки не найдены :(</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
