@@ -1,19 +1,12 @@
 {% extends 'main/layout.html' %}
 
-{% block title %} {{ title }} {% endblock %}
+{% block title %} Главная страница {% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cum dolorem facilis necessitatibus perferendis repellendus! Consectetur ipsa nobis quae suscipit!</p>
+        <h1>Главная страница</h1>
+        <p>На этом сайте можно осмотреть и добавить различную информацию про: библиотеки, фонды и работников.</p>
         <button class="btn btn-warning">На страницу библиотек</button>
-
-        {% for el in values %}
-
-        <p>{{ el }}</p>
-        {% endfor %}
-
-        {{ obj.age }}
     </div>
 {% endblock %}
 
