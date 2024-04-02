@@ -1,6 +1,5 @@
 from .models import Workers
-from django.forms import  ModelForm, TextInput
-
+from django.forms import ModelForm, TextInput
 
 
 class WorkersForm(ModelForm):

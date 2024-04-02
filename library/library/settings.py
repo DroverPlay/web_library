@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'workers',
     'libraries',
+    'fund',
 ]
 
 MIDDLEWARE = [

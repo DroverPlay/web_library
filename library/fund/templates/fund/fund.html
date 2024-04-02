@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Фонды{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Фонды</h1>
+            {% if fund %}
+            {% for el in fund %}
+                <div class="alert alert-warning">
+                    <h3>Название: {{ el.name }}</h3>
+                    <p>Кол-во книг: {{ el.count_book }}</p>
+                    <p>Кол-во журналов: {{ el.count_magazine }}</p>
+                    <p>Кол-во газет: {{ el.count_newspaper }}</p>
+                    <p>Кол-во сборников: {{ el.count_collection }}</p>
+                    <p>Кол-во диссертаций: {{ el.count_dissertation }}</p>
+                    <p>Кол-во рефератов: {{ el.count_report }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Фонды не найдены :(</p>
+        {% endif %}
+    </div>
+{% endblock %}
+

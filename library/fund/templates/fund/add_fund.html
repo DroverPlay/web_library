@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавить фонд{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление фонда</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name  }} <br>
+            {{ form.id_library }} <br>
+            {{ form.count_book }} <br>
+            {{ form.count_magazine  }} <br>
+            {{ form.count_newspaper  }} <br>
+            {{ form.count_collection  }} <br>
+            {{ form.count_dissertation  }} <br>
+            {{ form.count_report  }} <br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить фонд</button>
+        </form>
+    </div>
+{% endblock %}
+
