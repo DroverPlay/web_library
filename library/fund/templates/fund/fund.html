@@ -20,6 +20,7 @@
         {% else %}
             <p>Фонды не найдены :(</p>
         {% endif %}
+        <a href="{% url 'add_fund' %}"><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить Фонд</button></a>
     </div>
 {% endblock %}
 

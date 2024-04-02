@@ -19,6 +19,7 @@
         {% else %}
             <p>Работники не найдены :(</p>
         {% endif %}
+        <a href="{% url 'add_workers' %}"><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить работника</button></a>
     </div>
 {% endblock %}
 

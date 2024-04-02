@@ -18,17 +18,11 @@
         <h3>Навигация</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>
-            <a href="{% url 'workers_home' %}"><li><i class="fa-solid fa-user"></i> Работники</li></a>
             <a href="{% url 'libraries_home' %}"><li><i class="fa-solid fa-book"></i> Библиотеки</li></a>
+            <a href="{% url 'workers_home' %}"><li><i class="fa-solid fa-user"></i> Работники</li></a>
             <a href="{% url 'fund' %}"><li><i class="fa-solid fa-book-bookmark"></i> Фонды</li></a>
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-scroll-torah"></i> Типы литературы</li></a>
         </ul>
-        <h3>Добавление в таблицы</h3>
-        <ul>
-            <a href="{% url 'add_workers' %}"><li><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить работника</button></li></a>
-            <a href="{% url 'add_libraries' %}"><li><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить библиотеку</button></li></a>
-            <a href="{% url 'add_fund' %}"><li><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить Фонд</button></li></a>
-        </ul>
-        
     </aside>
     <main>
         {% block content %}
