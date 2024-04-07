@@ -2,7 +2,6 @@ from .models import Libraries
 from django.forms import ModelForm, TextInput
 
 
-
 class LibrariesForm(ModelForm):
     class Meta:
         model = Libraries

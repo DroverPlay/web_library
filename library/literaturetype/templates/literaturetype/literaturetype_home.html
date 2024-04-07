@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Типы литератур{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Типы литератур</h1>
+            {% if literatureType %}
+            {% for el in literatureType %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.name }}</h3>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Типы литератур не найдены :(</p>
+        {% endif %}
+        <a href="{% url 'add_literaturetype' %}"><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить тип</button></a>
+    </div>
+{% endblock %}
+

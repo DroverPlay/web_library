@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавить тип литературы{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление типа литературы</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name  }} <br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить тип литературы</button>
+        </form>
+    </div>
+{% endblock %}
+
