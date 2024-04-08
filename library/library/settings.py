@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'libraries',
     'fund',
     'literaturetype',
+    'fundrefill',
 ]
 
 MIDDLEWARE = [

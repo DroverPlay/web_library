@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Заполнение фондов{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Заполнение фондов</h1>
+            {% if fundrefill %}
+            {% for el in fundrefill %}
+                <div class="alert alert-warning">
+                    <h3>Издатель: {{ el.publisher }}</h3>
+                    <p>Дата публикации: {{ el.publication_date }}</p>
+                    <p>Кол-во экземпляров: {{ el.count_instance }}</p>
+                    <p>Код фонда: {{ el.fund_id }}</p>
+                    <p>Код заполняющего работника: {{ el.workers_id }}</p>
+                    <p>Дата заполнения: {{ el.date }}</p>
+                    <p>Название источника литературы: {{ el.name_source_literature }}</p>
+                    <p>Код типа литературы: {{ el.literature_type_id }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Заполнение фондов не найдены :(</p>
+        {% endif %}
+        <a href="{% url 'add_fund' %}"><button class="btn btn-info"><i class="fa-solid fa-circle-plus"></i> Добавить Фонд</button></a>
+    </div>
+{% endblock %}
+

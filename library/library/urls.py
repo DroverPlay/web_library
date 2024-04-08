@@ -26,4 +26,5 @@ urlpatterns = [
     path('libraries/', include('libraries.urls')),
     path('fund/', include('fund.urls')),
     path('literaturetype/', include('literaturetype.urls')),
+    path('fundrefil/', include('fundrefill.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
